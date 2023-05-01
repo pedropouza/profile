@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-top: 200px;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+}
+
+body {
+    background: url(imagens/wallpaper.jpg) center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#perfil {
+    width: 200px;
+    height: 200px;
+    background: url(imagens/minha_foto.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    transition: 1s;
+    cursor: pointer;
+    z-index: 1;
+}
+
+#perfil[class="active"] {
+    border-radius: 50px;
+    transition: 1s;
+}
+
+#links {
+    position: absolute;
+}
+
+#links a {
+    font-size: 4rem;
+    color: rgb(31, 81, 198);
+    position: absolute;
+    transform: translate(-50%, 80%);
+    transition: transform 0.5s;
+}
+
+#links a::before {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transform: translate(10%, 23%);
+    z-index: -1;
+}
+
+
+#links a:hover::after {
+    content: "";
+    font-size: 1rem;
+    color: #f8f8f8;
+    background: linear-gradient(to right, #222, #444);
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    position: absolute;
+    transform: translate(-80%, -95%);
+}
+
+#links a:nth-child(1):hover::after {
+    content: "Facebook";
+}
+
+#links a:nth-child(2):hover::after {
+    content: "Instagram";
+}
+
+#links a:nth-child(3):hover::after {
+    content: "Linkedin";
+    transform: translate(-85%, -95%);
+}
+
+#links a:nth-child(4):hover::after {
+    content: "GitHub";
+    transform: translate(-88%, -95%);
+}
+
+#links a:hover {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.207);
+}
+
+#links a:nth-child(1) {
+    color: rgb(31, 81, 198);
+    transition-delay: 0.4s;
+}
+
+#links a:nth-child(2) {
+    color: rgb(189, 14, 101);
+    transition-delay: 0.3s;
+}
+
+#links a:nth-child(3) {
+    color: rgb(70, 113, 212);
+    transition-delay: 0.2s;
+}
+
+#links a:nth-child(4) {
+    color: rgb(52, 52, 52);
+    transition-delay: 0.1s;
+}
+
+#links[class="active"] a:nth-child(1) {
+    transform: translate(-180px, 50px);
+    transition-delay: 0.1s;
+}
+
+#links[class="active"] a:nth-child(2) {
+    transform: translate(-110px, -80px);
+    transition-delay: 0.2s;
+}
+
+#links[class="active"] a:nth-child(3) {
+    transform: translate(45px, -80px);
+    transition-delay: 0.3s;
+}
+
+#links[class="active"] a:nth-child(4) {
+    transform: translate(125px, 50px);
+    transition-delay: 0.4s;
+}
+
+#info {
+    max-width: 500px;
+    text-align: justify;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 15px;
+    background-color: #222222ad;
+    backdrop-filter: blur(1px);
+    box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.117);
+    color: #eeeeee;
+}
+
+#info h1, #info p {
+    margin-bottom: 10px;
+}
+
+#info p:nth-child(4) {
+    font-style: italic;
+    font-size: 0.95rem;
+}
