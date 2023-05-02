@@ -32,15 +32,17 @@
 
 #list {
     background: transparent;
-    height: auto;
+    height: 35px;
     overflow: hidden;
     border-radius: 5px;
+
 }
 
 #lang:hover #list {
     background: linear-gradient(to bottom, #222222dc, #333333db);
-    height: fit-content;
-    overflow-y: visible;
+    height: 70px;
+    overflow-y: hidden;
+    transition: 0.3s;
 }
 
 #list ul a {
