@@ -7,36 +7,57 @@
 
 #lang {
     display: flex;
-    background-color: #222222ad;
-    backdrop-filter: blur(1px);
-    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.117);
-    color: #eeeeee;
+    background: linear-gradient(to bottom, #222222dc, #333333db);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: #eee;
     width: max-content;
-    padding: 10px;
-    gap: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
+    height: 35px;
+    user-select: none;
 }
 
 #lang ul li {
-    list-style-type: none;
-    display: none;
-}
-
-#lang ul li a {
-    background-color: #fff;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-}
-
-#lang ul li[class="active"] {
-    display: block;
-}
-
-#lang:hover ul li {
+    list-style: none;
     display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3px;
+    height: 35px;
+    padding: 0px 7px;
 }
+
+#lang div:nth-child(1) {
+    padding: 7px 2px 7px 8px;
+}
+
+#list {
+    background: transparent;
+    height: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+#lang:hover #list {
+    background: linear-gradient(to bottom, #222222dc, #333333db);
+    height: fit-content;
+    overflow-y: visible;
+}
+
+#list ul a {
+    color: #45d0da;
+    text-decoration: none;
+    transition: 0.15s;
+}
+
+#list ul a:hover {
+    color: #e42387;
+}
+
+#list ul li {
+    text-align: left;
+}
+
+
 
 #container {
     width: 100%;
@@ -134,8 +155,13 @@ body {
 }
 
 #links a:nth-child(2) {
-    color: rgb(189, 14, 101);
     transition-delay: 0.3s;
+}
+
+#links a:nth-child(2) i {
+    background-image: linear-gradient(135deg, #833AB4 0%, #C13584 40%, #FD1D1D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 #links a:nth-child(3) {
@@ -169,17 +195,17 @@ body {
 }
 
 ::selection {
-    background-color: rgb(23, 94, 122);
+    background-color: #175e7a;
 }
 
 #info {
     max-width: 500px;
     text-align: justify;
     padding: 20px;
-    margin: 10px auto;
+    margin: 10px 10px;
     border-radius: 15px;
     background-color: #222222ad;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(1.5px);
     box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 0.117);
     color: #eeeeee;
 }
@@ -188,7 +214,7 @@ body {
     margin-bottom: 10px;
 }
 
-#info p:nth-child(4) {
+#info p:nth-child(5) {
     font-style: italic;
     font-size: 0.95rem;
     text-decoration: underline;
