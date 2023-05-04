@@ -45,6 +45,15 @@
     transition: 0.3s;
 }
 
+#lang #list ul li span {
+    transform: rotate(-90deg);
+    transition: 0.3s;
+}
+
+#lang:hover #list ul li span {
+    transform: rotate(0deg);
+}
+
 #list ul a {
     color: #45d0da;
     text-decoration: none;
