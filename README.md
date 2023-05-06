@@ -1,4 +1,4 @@
 # profile
 Sobre mim e meus perfis de contato!
 
-https://pedropouza.github.io/profile/
+<a target=_blank>https://pedropouza.github.io/profile/</a>
